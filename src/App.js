@@ -37,8 +37,11 @@ function App() {
     }
   ])
   return (
-    <div className="App">
-      <RouterProvider router={router}></RouterProvider>
+    <div className='background'>
+       <div className='outlet'>
+       <RouterProvider router={router}></RouterProvider>
+       </div>
+    
     </div>
   );
 }
