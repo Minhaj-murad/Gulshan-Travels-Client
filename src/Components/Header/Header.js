@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import img from '../../assests/images/img.png'
+import './Header.css'
 const Header = () => {
     const navItems = <>
         <li className='font-semibold'><Link to='/'>Home</Link></li>
@@ -15,7 +16,7 @@ const Header = () => {
     </>
 
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar h-20 mb-12 pt-12">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -25,9 +26,9 @@ const Header = () => {
              {navItems}
             </ul>
           </div>
-          <Link to='/' className="btn btn-ghost normal-case text-xl">
+          <Link to='/' className="btn btn-ghost normal-case text-xl gap-4">
             <img className='w-10' src={img} alt="" />
-            Explore Canada!!
+           <h1 className='company-name'> Gulshan Travels!</h1>
             </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -36,7 +37,7 @@ const Header = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Get started</a>
+          <a className="btn">Book Now</a>
         </div>
       </div>
     );

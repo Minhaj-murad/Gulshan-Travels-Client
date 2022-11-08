@@ -16,10 +16,12 @@ function App() {
         {
           path:'/',
           element:<Home></Home>,
+          loader:()=>fetch('data.json')
         },
         {
           path:'/home',
           element:<Home></Home>,
+          
         },
         {
           path:'/login',
@@ -37,13 +39,15 @@ function App() {
     }
   ])
   return (
-    <div className='background'>
-       <div className='outlet'>
-       <RouterProvider router={router}></RouterProvider>
-       </div>
-    
+    <div className=' background' >
+
+    <div className='outlet'>
+    <RouterProvider router={router}> </RouterProvider>
     </div>
-  );
+    
+   
+  </div>
+);
 }
 
 export default App;
