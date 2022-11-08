@@ -1,6 +1,7 @@
 import React from 'react';
 
-const Places = () => {
+const Hotelitems = ({hotel}) => {
+    console.log(hotel);
     return (
         <div>
             
@@ -8,4 +9,4 @@ const Places = () => {
     );
 };
 
-export default Places;
+export default Hotelitems;

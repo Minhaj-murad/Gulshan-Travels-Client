@@ -1,84 +1,75 @@
 [ 
     {
     "id": "1",
-    
-    "city": "Minhaj Murad",
-    "team": "Bangladesh",
-    "club": "FC Barcelona",
-    "age": "25",
-    "img": "https://i.ibb.co/fDgSTrm/f1.jpg" 
+    "hotelName": "Rosewood Hotel Georgia",
+    "place": "Vancouver BC",
+    "rating": "5.0",
+    "price": "25",
+    "img": "https://i.ibb.co/f8xG8n6/deluxe-king-guestroom-v16085405-1440.jpg" 
     },
     {
-      "id": "6342c46d5b7b88a902a56a81",
-      "goals": 944,
-      "city": "Cristiano Ronaldo",
-      "team": "Portugal",
-      "club": "Manchester United",
-      "age": "37",
-      "img": "https://i.ibb.co/TmWVNJq/f2.jpg" 
+      "id": "2",
+      "hotelName": "Ritz-Carlton Montréal",
+      "place": "Montreal, QC",
+      "rating": "5.0",
+      "price": "237",
+      "img": "https://i.ibb.co/yfmRctX/Ritz-Carlton-Montreal-16.jpg" 
     },
     {
-      "id": "6342c46da19583bea29c908c",
-      "goals": 859,
-      "city": "Lionel Messi",
-      "team": "Argentina",
-      "club": "Paris Saint Germain",
-      "age": "33",
-      "img": "https://i.ibb.co/wJLFYXX/f3.webp" 
+      "id": "3",
+      "hotelName": "Fairmont Pacific Rim",
+      "place": "Vancouver, BC",
+      "rating": "4.9",
+      "price": "233",
+      "img": "https://i.ibb.co/hZvZ2pG/signature-ofuro-room.jpg" 
     },
     {
-      "id": "6342c46d3f8b3716dd94b5d1",
-      "goals": 134,
-      "city": "Mesut Ozil",
-      "team": "Germany",
-      "club": "Arsenal Fc",
-      "age": "30",
-      "img": "https://i.ibb.co/W2P69w3/f4.jpg" 
+      "id": "4",
+      "hotelName": "Auberge Saint-Antoine",
+      "place": "Québec City, QC",
+      "rating": "4.8",
+      "price": "230",
+      "img": "https://i.ibb.co/njRwrTP/Suite.jpg"
     },
     {
-      "id": "6342c46e96e595c645e0702d",
-      "goals": 80,
-      "city": "David Beckham",
-      "team": "England",
-      "club": "Manchester United",
-      "age": "41",
-      "img": "https://i.ibb.co/VQwyKV1/f5.jpg" 
+      "id": "5",  
+      "hotelName": "Fogo Island Inn",
+      "place": "Joe Batt's Arm",
+      "rating": "4.85",
+      "price": "241",
+      "img": "https://i.ibb.co/f9QzLGb/Interior-ENL-1536x693.jpg" 
     },
     {
-      "id": "6342c46ee921e926ffbcf465",
-      "goals": 370,
-      "city": "Marco Reus",
-      "team": "Germany",
-      "club": "Burussia Dortmund",
-      "age": "30",
-      "img": "https://i.ibb.co/YQrNBz4/f6.webp"
+      "id": "6",
+      "hotelName": "The Ritz-Carlton",
+      "place": " Toronto",
+      "rating": "4.9",
+      "price": "300",
+      "img": "https://i.ibb.co/nzrzDHw/yyzrz-bedroom-50668493.jpg" 
     },
     {
-      "id": "6342c47b907a47878cdca5c5",
-      "goals": 400,
-      "city": "Neymar Jr",
-      "team": "Brasil",
-      "club": "Paris Saint Germain",
-      "age": "29",
-      "img": "https://i.ibb.co/KVSY9Bh/f7.jpg" 
+      "id": "7",
+      "hotelName": "Manoir Hovey",
+      "place": "North Hatley, QC",
+      "rating": "4.8",
+      "price": "290",
+      "img": "https://i.ibb.co/XYHWPpQ/treetops.jpg" 
      },
      {
-       "id": "6342c47bf5d218d1a196ca95",
-     "goals": 292,
-     "city": "Kevin de Bruinee",
-     "team": "Belgium",
-     "club": "Manchester City",
-     "age": "31",
-     "img":"https://i.ibb.co/FVWS5h0/f8.jpg" 
+       "id": "8",
+     "hotelName": "Magnolia Hotel & Spa",
+     "place": "Victoria, BC",
+     "rating": "4.75",
+     "price": "310",
+     "img":"https://i.ibb.co/7WxLLkN/Superior-Room-King-Bed.jpg"
      },
      {
-     "id": "6342c47b9da4ecf14df91399",
-     "goals": 176,
-     "city": "Robert Lewandoski",
-     "team": "Poland",
-     "club": "FC Barcelona",
-     "age": "32",
-     "img": "https://i.ibb.co/ggJxdQp/f9.jpg" 
+     "id": "9",
+     "hotelName": "Fairmont Chateau Whistler",
+     "place": "Whistler, BC",
+     "rating": "4.9",
+     "price": "320",
+     "img":"https://i.ibb.co/xf7ybPN/dd.jpg" 
      }
     
      ]
