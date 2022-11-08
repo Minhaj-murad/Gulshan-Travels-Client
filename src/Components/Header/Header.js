@@ -26,9 +26,9 @@ const Header = () => {
              {navItems}
             </ul>
           </div>
-          <Link to='/' className="btn btn-ghost normal-case text-xl gap-4">
-            <img className='w-10' src={img} alt="" />
-           <h1 className='company-name'> Gulshan Travels!</h1>
+          <Link to='/' className="btn btn-ghost normal-case text-xl gap-4 -mt-6">
+            <img className='w-16 ' src={img} alt="" />
+           <h1 className='company-name text-amber-600 font-bold text-3xl'> Gulshan Travels!</h1>
             </Link>
         </div>
         <div className="navbar-center hidden lg:flex">

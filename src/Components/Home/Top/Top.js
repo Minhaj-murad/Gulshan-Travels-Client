@@ -4,7 +4,7 @@ import Carousel from './Carousel/Carousel';
 
 const Top = () => {
     return (
-        <div className='flex'>
+        <div className='flex '>
            <div>
             <Animation></Animation>
             

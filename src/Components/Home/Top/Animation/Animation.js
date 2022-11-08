@@ -8,7 +8,7 @@ const Animation = () => {
         <div data-aos="fade-up"
         data-aos-duration="3000" className='animation'>
           <div className='anime-text  mx-12'>
-          <h1 className='text-5xl text-amber-700'>EXPLORE CANADA <br /> WITH <br /> GULSHAN TRAVELS <span><FontAwesomeIcon icon={faPlane} />  </span>  </h1>
+          <h1 className='text-5xl text-amber-600 font-extrabold'>EXPLORE CANADA <br /> WITH <br /> GULSHAN TRAVELS <span><FontAwesomeIcon icon={faPlane} />  </span>  </h1>
           </div>
         </div>
     );
