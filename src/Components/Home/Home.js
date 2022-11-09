@@ -1,4 +1,5 @@
 import React from 'react';
+import Activities from './Activities/Activities';
 import Hotel from './Hotels/Hotel';
 import Places from './Hotels/Places/Places';
 
@@ -13,6 +14,8 @@ const Home = () => {
             <Top></Top>
             <Hotel></Hotel>
             <Places> </Places>
+            <Activities></Activities>
+
         </div>
     );
 };
