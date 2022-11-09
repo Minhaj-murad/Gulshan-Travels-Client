@@ -12,7 +12,7 @@ const Hotel = () => {
             <h1 className='hotelsName  text-amber-600 font-extrabold text-4xl mt-6 text-center mb-6 '>Hotels Nearby places:</h1>
            <div className='grid grid-cols-3 gap-20'>
            {
-                hotels.rooms.map(hotel => <Hotelitems
+                hotels.map(hotel => <Hotelitems
                 key={hotel.id}
                 hotel={hotel}></Hotelitems>)
             }

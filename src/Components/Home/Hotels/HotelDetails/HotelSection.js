@@ -9,7 +9,7 @@ const HotelSection = ({hotel}) => {
     console.log(hotel);
     return (
         <div>
-             <div data-aos="fade-up" data-aos-duration="3000" className="card card-compact w-9/12 h-full mx-auto bg-base-100 shadow-2xl">
+             <div className="card card-compact w-auto h-full mx-5 bg-base-100 shadow-2xl">
                 <figure>
                     
                     <PhotoProvider>
@@ -28,7 +28,7 @@ const HotelSection = ({hotel}) => {
                     <p className='mt-1 '><FontAwesomeIcon icon={faStar} />   {rating}</p>
 
                     <p className='text-white'>{description}</p>
-
+                    <button className="btn btn-ghost w-36 mx-auto ">Book Now</button>
                 </div>
             </div>
         </div>

@@ -27,6 +27,11 @@ function App() {
           
         },
         {
+          path:'/',
+          element:<Places></Places>,
+         
+        },
+        {
           path:'/login',
           element:<Login></Login>,
         },
