@@ -1,19 +1,30 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import img from '../../assests/images/img.png'
 import './Header.css'
+import { AuthContext } from '../AuthProvider/Authprovider';
 const Header = () => {
-    const navItems = <>
-        <li className='font-semibold'><Link to='/'>Home</Link></li>
+  const {user,logOut} = useContext(AuthContext);
+     
+  const handleLogOut = () => {
+    logOut()
+        .then(() => { })
+        .catch(error => console.error(error))
+}
 
+    const navItems =  <>
+    <li className='font-semibold'><Link to='/'>Home</Link></li>
+    {
+        user?.email ? 
+        <>
+        <li className='font-semibold'><Link to='/booking'>Bookings</Link></li>
+        <li className='font-semibold'><Link onClick={handleLogOut}>Logout</Link></li>
 
-        <li className='font-semibold'><Link to='/orders'>Orders</Link></li>
-        <li className='font-semibold'><Link to='/logout'>Logout</Link></li>
-
-        
+        </>
+        :
         <li className='font-semibold'><Link to='/login'>Login</Link></li>
-
-    </>
+    }
+</>
 
     return (
         <div className="navbar h-20 mb-12 pt-12">
