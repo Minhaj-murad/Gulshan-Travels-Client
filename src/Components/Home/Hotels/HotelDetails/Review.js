@@ -4,7 +4,7 @@ import Overviews from './Overviews/Overviews';
 import './Review.css'
 const Review = () => {
     const {user} =useContext(AuthContext);
-    const {displayName,email,photoURL}=user;
+    const {_id,displayName,email,photoURL}=user;
      
 
     const handlePlacereview = event => {
@@ -13,6 +13,7 @@ const Review = () => {
         const message = form.message.value;
 
         const review = {
+            _id,
             reviewer: displayName,
             email,
             photo:photoURL,
@@ -61,9 +62,9 @@ const Review = () => {
         </div>
         </div>
        </div>
-       <div>
+       <div className='publicReviews'>
            <h1 className='text-center mt-8 text-4xl font-bold text-amber-600'> See Peoples thought on this hotel </h1>
-           <div>
+           <div className='overviews'>
             <Overviews> </Overviews>
            </div>
        </div>
