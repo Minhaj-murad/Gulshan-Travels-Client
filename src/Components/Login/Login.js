@@ -1,11 +1,16 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../AuthProvider/Authprovider';
 import './Login.css'
+import { FaGoogle } from 'react-icons/fa';
+import { GoogleAuthProvider } from 'firebase/auth';
 
 const Login = () => {
-    const { login } = useContext(AuthContext);
-
+    const { login,googlesignin } = useContext(AuthContext);
+    const googleprovider = new GoogleAuthProvider();
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/'
     const handleLogin = event => {
         event.preventDefault();
         const form = event.target;
@@ -16,8 +21,23 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                form.reset();
+                navigate(from, { replace: true })
+
             })
             .then(error => console.log(error));
+    }
+
+    const handlegooglesign = () => {
+        googlesignin(googleprovider)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                navigate(from, { replace: true })
+
+                
+            })
+            .catch(error => console.error(error));
     }
 
     return (
@@ -49,7 +69,13 @@ const Login = () => {
                                 <input className="btn btn-primary" type="submit" value="Login" />
                             </div>
                         </form>
-                        <p className='text-center'>New to Gulshan Travels? <Link className='text-amber-600 font-bold' to="/signup">Sign Up</Link> </p>
+                        <p className='text-center'>New to Gulshan Travels? <Link className='text-blue-600 font-bold' to="/signup">Sign Up</Link> </p>
+                        <div className='w-56  gap-2 mx-auto'>
+                            <h1 className='text-center'>Or, Sign in with </h1>
+                            <span><button onClick={handlegooglesign} className='bg-amber-600 py-1 px-2 rounded-lg text-center w-28 mx-auto flex items-center gap-4 border border-gray-700 text-black'><FaGoogle></FaGoogle> Google </button></span>
+
+                        </div>
+
                     </div>
                     <div data-aos="fade-left" data-aos-duration="3000" className=" text-center lg:text-left">
 
