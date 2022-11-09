@@ -4,9 +4,10 @@ import 'react-photo-view/dist/react-photo-view.css';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom';
 const Hotelitems = ({ hotel }) => {
     console.log(hotel);
-    const { img, price, rating, hotelName, place, description } = hotel;
+    const {id, img, price, rating, hotelName, place, description } = hotel;
     return (
         <div>
             <div data-aos="fade-up" data-aos-duration="3000" className="card card-compact w-96 bg-base-100 shadow-2xl">
@@ -30,7 +31,7 @@ const Hotelitems = ({ hotel }) => {
                     <p className='text-white'>{description.length > 100 ? description.slice(0, 200) + '...' : description}</p>
 
                     <div className="card-actions  justify-end">
-                        <button className="btn btn-primary">See details</button>
+                        <button className="btn btn-primary"><Link to={`/hotels/${id}`} className=' font-bold'>See Details </Link></button>
                     </div>
                 </div>
             </div>
