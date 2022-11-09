@@ -16,6 +16,7 @@ const Hotel = () => {
                 key={hotel.id}
                 hotel={hotel}></Hotelitems>)
             }
+            
            </div>
 
         </div>

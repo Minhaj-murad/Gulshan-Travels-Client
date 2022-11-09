@@ -1,12 +1,21 @@
 import React from 'react';
 import './Placeitem.css'
+import 'react-photo-view/dist/react-photo-view.css';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
 const PlaceItem = ({ place }) => {
     const { img, city, price, rating } = place;
     console.log(img, city, price, rating);
     return (
         <div>
             <div className="card  bg-base-100 shadow-xl">
-                <figure><img className='h-96 w-full' src={img} alt="Shoes" /></figure>
+                <figure>
+                <PhotoProvider>
+                        <PhotoView src= {img} >
+                        <img className='h-96 w-full' src={img} alt="Shoes" />
+                        </PhotoView>
+                    </PhotoProvider>
+                
+                </figure>
                 <div className="card-body">
                     <h2 className="card-title">
                        {city}
