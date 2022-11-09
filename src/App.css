@@ -1,6 +1,6 @@
 .background{
   background-image: url('../src/assests/Background/bg-1.jpg');
-  background-size: cover;
+  background-size: 100%;
   
 }
 .outlet{

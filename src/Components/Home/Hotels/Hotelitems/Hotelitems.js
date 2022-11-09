@@ -7,9 +7,9 @@ const Hotelitems = ({ hotel }) => {
     const { img, price, rating, hotelName, place,description } = hotel;
     return (
         <div>
-            <div data-aos="fade-up" data-aos-duration="3000" className="card card-compact w-96 bg-white shadow-2xl">
-                <figure><img className='card-img' src={img} alt="Shoes" /></figure>
-                <div className="card-body text-green-600">
+            <div data-aos="fade-up" data-aos-duration="3000" className="card card-compact w-96 bg-base-100 shadow-2xl">
+                <figure><img className='card-img ' src={img} alt="Shoes" /></figure>
+                <div className="card-body text-amber-600">
                     <h2 className="text-xl font-bold">{hotelName}</h2>
                     <h2 className="text-lg font-semibold">{place}</h2>
                   
@@ -18,7 +18,7 @@ const Hotelitems = ({ hotel }) => {
                        
                          <p className='mt-1 '><FontAwesomeIcon icon={faStar } />   {rating}</p>
                       
-                       <p>{description.length>200 ? description.slice(0,200)+'...' : description}</p>
+                       <p className='text-white'>{description.length>100 ? description.slice(0,200)+'...' : description}</p>
                     
                     <div className="card-actions  justify-end">
                         <button className="btn btn-primary">See details</button>

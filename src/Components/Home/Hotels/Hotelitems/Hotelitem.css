@@ -1,4 +1,10 @@
 .card-img{
-    width: 220px;
+    width: 400px;
     height: 200px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+.card{
+    font-family:cursive;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
 }
