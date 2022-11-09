@@ -1,0 +1,16 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+.login-text{
+    font-family:cursive;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+.outside{
+    background-image: url('../../assests/Background/bg-2.jpg');
+    background-size: 100%;
+    
+  }
+  .inside{
+    background-color: rgba(0, 0, 0, 0.705);
+  }
+  
