@@ -13,7 +13,7 @@ const Hotel = () => {
            <div className='grid grid-cols-3 gap-20'>
            {
                 hotels.map(hotel => <Hotelitems
-                key={hotel.id}
+                key={hotel._id}
                 hotel={hotel}></Hotelitems>)
             }
             

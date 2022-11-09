@@ -7,7 +7,7 @@ import { faStar } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom';
 const Hotelitems = ({ hotel }) => {
     console.log(hotel);
-    const {id, img, price, rating, hotelName, place, description } = hotel;
+    const {_id, img, price, rating, hotelName, place, description } = hotel;
     return (
         <div>
             <div data-aos="fade-up" data-aos-duration="3000" className="card card-compact w-96 bg-base-100 shadow-2xl">
@@ -31,7 +31,7 @@ const Hotelitems = ({ hotel }) => {
                     <p className='text-white'>{description.length > 100 ? description.slice(0, 200) + '...' : description}</p>
 
                     <div className="card-actions  justify-end">
-                        <button className="btn btn-primary"><Link to={`/hotels/${id}`} className=' font-bold'>See Details </Link></button>
+                        <button className="btn btn-primary"><Link to={`/hotels/${_id}`} className=' font-bold'>See Details </Link></button>
                     </div>
                 </div>
             </div>

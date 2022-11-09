@@ -7,9 +7,9 @@ const HotelDetails = () => {
     const hotel = useLoaderData();
     
     return (
-        <div className='grid grid-cols-2 gap-2'>
+        <div className=''>
             <HotelSection hotel= {hotel}></HotelSection>
-            <Review></Review>
+            <Review hotel={hotel}></Review>
         </div>
     );
 };
