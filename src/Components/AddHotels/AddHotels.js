@@ -12,7 +12,7 @@ const AddHotels = () => {
         const place = form.place.value;
         const rating = form.rating.value;
         const description = form.description.value;
-        const photoURL=form.photoURL.value;
+        const img=form.photoURL.value;
         
 
         const hotel = {
@@ -21,7 +21,7 @@ const AddHotels = () => {
             price,
             place,
            description,
-           photoURL
+           img
         }
 
        
@@ -46,6 +46,10 @@ const AddHotels = () => {
 
 
     }
+                
+
+
+
     return (
         <div>
              <form onSubmit={handlePlacehotel} >

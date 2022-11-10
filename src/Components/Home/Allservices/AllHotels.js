@@ -20,7 +20,7 @@ const Allservices = () => {
             }
             
            </div>
-           <button >See all</button>
+        
 
         </div>
     );
