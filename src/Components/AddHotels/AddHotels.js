@@ -1,5 +1,7 @@
 import React from 'react';
-
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
+  
 
 const AddHotels = () => {
  
@@ -37,7 +39,7 @@ const AddHotels = () => {
             .then(data => {
                 console.log(data)
                 if(data.acknowledged){
-                    alert('hotel added successfully')
+                    toast('hotel added successfully')
                     form.reset();
                     
                 }
@@ -67,6 +69,7 @@ const AddHotels = () => {
 
                 <input className='btn mt-6' type="submit" value="Add Hotel" />
             </form>
+            <ToastContainer />
         </div>
     );
 };
