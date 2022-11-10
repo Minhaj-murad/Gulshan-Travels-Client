@@ -66,7 +66,7 @@ const Login = () => {
                                 </label>
                             </div>
                             <div className="form-control mt-6">
-                                <input className="btn btn-primary" type="submit" value="Login" />
+                                <input className="btn bg-base-100" type="submit" value="Login" />
                             </div>
                         </form>
                         <p className='text-center'>New to Gulshan Travels? <Link className='text-blue-600 font-bold' to="/signup">Sign Up</Link> </p>

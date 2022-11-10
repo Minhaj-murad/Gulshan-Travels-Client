@@ -1,16 +1,18 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { AuthContext } from '../../../../AuthProvider/Authprovider';
+import React, {  useEffect, useState } from 'react';
+
 import OverViewItem from './OverViewItems/OverViewItem';
 
-const Overviews = () => {
-    const {user}=useContext(AuthContext);
+const Overviews = ({hotel}) => {
+   
     const [reviews,setReviews]=useState([]);
-
+    console.log(hotel);
+    const {_id}=hotel;
+    console.log(_id);
     useEffect(() => {
-        fetch(`http://localhost:5000/reviews?email=${user?.email}`)
+        fetch(`http://localhost:5000/reviews?hotelid=${_id}`)
             .then(res => res.json())
             .then(data => setReviews(data))
-    }, [user?.email])
+    }, [_id])
 
     const handleStatusUpdate = id => {
         fetch(`http://localhost:5000/reviews/${id}`, {
@@ -26,8 +28,6 @@ const Overviews = () => {
             if(data.modifiedCount > 0) {
                 const remaining = reviews.filter(revi => revi._id !== id);
                 const submitting = reviews.find(revi => revi._id === id);
-                submitting.status = 'Submitted'
-
                 const newreviews = [submitting, ...remaining];
                 setReviews(newreviews);
             }
@@ -36,6 +36,7 @@ const Overviews = () => {
     return (
         <div className='grid grid-cols-4'>
            
+
                
                   
                         {

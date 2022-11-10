@@ -14,17 +14,18 @@ const Header = () => {
   }
 
   const navItems = <>
-    <li className='font-semibold'><Link to='/'>Home</Link></li>
+    <li className='font-semibold text-amber-600'><Link to='/'>Home</Link></li>
     {
       user?.email ?
         <>
-          <li className='font-semibold'><Link to='/booking'>My Bookings</Link></li>
-          <li className='font-semibold'><Link to='/addBooking'>Add Bookings</Link></li>
-          <li className='font-semibold'><Link onClick={handleLogOut}>Logout</Link></li>
+          <li className='font-semibold text-amber-600'><Link to='/myreviews'>My Reviews</Link></li>
+          <li className='font-semibold text-amber-600'><Link to='/addBooking'>Add Bookings</Link></li>
+          <li className='font-semibold text-amber-600'><Link onClick={handleLogOut}>Logout</Link></li>
 
         </>
         :
-        <li className='font-semibold'><Link to='/login'>Login</Link></li>
+       <> 
+        <li className='font-semibold text-amber-600'><Link to='/login'>Login</Link></li> </>
     }
 
     <li className='font-semibold'>
@@ -37,7 +38,7 @@ const Header = () => {
     </Link>
     </li>
     <li className='font-semibold'>
-    <Link to="/profile" className='text-white'>
+    <Link to="/profile" className='text-amber-600'>
       {user?.photoURL ?
         <img className='rounded-full ' style={{ height: '30px' }} src={user?.photoURL} alt="" />
 
@@ -57,6 +58,7 @@ const Header = () => {
           </label>
           <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
             {navItems}
+            
           </ul>
         </div>
         <Link to='/' className="btn btn-ghost normal-case text-xl gap-4 -mt-6">
@@ -67,10 +69,11 @@ const Header = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal p-0">
           {navItems}
+          <li className='font-semibold text-amber-600'><Link to='/blog'>My Blog</Link></li>
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Book Now</a>
+        <Link className="btn text-amber-600">Book Now</Link>
       </div>
     </div>
   );

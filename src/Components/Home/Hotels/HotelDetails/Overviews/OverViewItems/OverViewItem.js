@@ -1,21 +1,17 @@
 import React from 'react';
 
-const OverViewItem = ({ review, handleStatusUpdate }) => {
-    const {_id, reviewer, email, photo, message,status } = review;
+const OverViewItem = ({ review }) => {
+    console.log(review);
+    const {name, photo, message } = review;
     return (
-        <div>
-            <div className="card card-side  shadow-xl">
-                <figure><img className='w-16 rounded-3xl' src={photo} alt="" /></figure>
-                <div className="card-body">
-                    <h2 className="card-title">{reviewer}</h2>
-
-                    <p>{email}</p>
-                    <p>{message}</p>
-                    <button
-                        onClick={() => handleStatusUpdate(_id)}
-                        className="btn btn-ghost btn-xs">{status ? status : 'updating'}</button>
-
-                </div>
+        <div className='bg-slate-100 w-72 rounded-2xl m-8'>
+            <div className='flex justify-center'>
+                <img className='w-12 h-12 mr-6 rounded-full' src={photo} alt="" />
+                <h1 className='text-xl text-gray-600 font-semibold'>{name}</h1>
+            </div>
+            <div className='mt-6 '>
+            <h1 className='text-xl text-gray-600 font-semibold'>Review: <hr /></h1> <br />
+            <h1 className='text-lg text-gray-600 font-semibold text-center'>{message}</h1>
             </div>
         </div>
     );

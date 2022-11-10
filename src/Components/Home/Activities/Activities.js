@@ -3,7 +3,7 @@ import img from '../../../assests/Background/bg-2.jpg'
 import './Activities.css'
 const Activities = () => {
     return (
-        <div data-aos="fade-up" data-aos-duration="3000" >
+        <div data-aos="fade-left" data-aos-duration="3000" >
             <h1 className='  text-amber-600 font-extrabold text-4xl mt-6 text-center mb-6 '> Popular Activities <hr /></h1>
             <div className="hero min-h-screen" style={{ backgroundImage: `url${img}` }}>
                 <div className="hero-overlay bg-opacity-20 grid grid-cols-3 gap-10">

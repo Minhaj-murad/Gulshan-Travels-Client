@@ -10,7 +10,9 @@ const Hotelitems = ({ hotel }) => {
     const {_id, img, price, rating, hotelName, place, description } = hotel;
     return (
         <div>
-            <div data-aos="fade-up" data-aos-duration="3000" className="card card-compact w-96 bg-base-100 shadow-2xl">
+            <div data-aos="flip-left"
+                        data-aos-easing="ease-out-cubic"
+                        data-aos-duration="2000" className="card card-compact w-96 bg-base-100 shadow-2xl">
                 <figure>
                     
                     <PhotoProvider>

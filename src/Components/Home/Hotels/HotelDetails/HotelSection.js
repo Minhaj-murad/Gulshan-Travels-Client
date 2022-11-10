@@ -2,6 +2,7 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
+import Overviews from './Overviews/Overviews';
 
 
 const HotelSection = ({hotel}) => {
@@ -31,7 +32,15 @@ const HotelSection = ({hotel}) => {
                     <button className="btn btn-ghost w-36 mx-auto ">Book Now</button>
                 </div>
             </div>
+            <div className='publicReviews'>
+            <h1 className='text-center mt-8 text-4xl font-bold text-amber-600'> See Peoples thought on this hotel </h1>
+            <div className='overviews'>
+                <Overviews hotel={hotel}> </Overviews>
+            </div>
         </div>
+        </div>
+           
+
     );
 };
 

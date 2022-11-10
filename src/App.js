@@ -2,11 +2,14 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import Booking from './Components/Booking/Booking';
+import Allservices from './Components/Home/Allservices/Allservices';
 import Home from './Components/Home/Home';
 import HotelDetails from './Components/Home/Hotels/HotelDetails/HotelDetails';
 import Places from './Components/Home/Hotels/Places/Places';
+import Myreviews from './Components/Home/MyReviews/Myreviews';
 import Login from './Components/Login/Login';
 import Main from './Components/Main/Main';
+import MyBlog from './Components/MyBlog/MyBlog';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Signup from './Components/Signup/Signup';
 
@@ -36,12 +39,27 @@ function App() {
           element:<Login></Login>,
         },
         {
+           path:'/blog',
+           element:<MyBlog></MyBlog>
+        },
+        {
+              path:'/allhotels',
+              element:<Allservices></Allservices>,
+              loader:()=>fetch('http://localhost:5000/hotels')
+        },
+        {
           path:'/login',
           element:<Login></Login>,
         },
         {
           path:'/bookings',
           element:<PrivateRoute><Booking></Booking></PrivateRoute>,
+        },
+        { 
+          path:'/myreviews',
+          element:<PrivateRoute><Myreviews></Myreviews></PrivateRoute>,
+          loader: ()=> fetch('http://localhost:5000/hotels')
+          
         },
         {
            path:'/hotels/:id',
