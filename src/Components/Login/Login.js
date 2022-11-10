@@ -4,6 +4,7 @@ import { AuthContext } from '../AuthProvider/Authprovider';
 import './Login.css'
 import { FaGoogle } from 'react-icons/fa';
 import { GoogleAuthProvider } from 'firebase/auth';
+import Usetitle from '../Hooks/Usetitle';
 
 const Login = () => {
     const { login,googlesignin } = useContext(AuthContext);
@@ -11,6 +12,10 @@ const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || '/'
+    Usetitle('Log in')
+
+
+
     const handleLogin = event => {
         event.preventDefault();
         const form = event.target;

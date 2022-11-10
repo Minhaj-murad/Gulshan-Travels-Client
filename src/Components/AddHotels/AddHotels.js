@@ -1,11 +1,12 @@
 import React from 'react';
 import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
+import Usetitle from '../Hooks/Usetitle';
   
 
 const AddHotels = () => {
  
-
+    Usetitle('Add Hotel')
     const handlePlacehotel = event => {
         event.preventDefault();
         const form = event.target;
@@ -58,6 +59,7 @@ const AddHotels = () => {
                 <h2 className="text-4xl text-center text-amber-600 mb-8">Add New Hotel </h2>
                 
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
+                    
                     <input name="hotelName" type="text" placeholder="Hotel Name" className="input input-ghost w-full  input-bhoteled" />
                     <input name="place" type="text" placeholder="Place" className="input input-ghost w-full  input-bhoteled" required />
                     <input name="price" type="text" placeholder="Price" className="input input-ghost w-full  input-bhoteled" required />

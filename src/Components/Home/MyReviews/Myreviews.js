@@ -1,11 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../AuthProvider/Authprovider';
+import Usetitle from '../../Hooks/Usetitle';
 import ReviewRow from './ReviewsRow/ReviewRow';
 import './ReviewsRow/ReviewRow.css'
 const Myreviews = () => {
     const { user } = useContext(AuthContext);
     const [reviews, setReviews] = useState([])
-
+    Usetitle('My Reviews')
 
 
     useEffect(() => {
@@ -37,6 +38,23 @@ const Myreviews = () => {
             }
         })
     }
+    const handleDelete = id =>{
+        const proceed = window.confirm('Are you sure, you want to cancel this REVIEW?');
+        if(proceed){
+            fetch(`http://localhost:5000/reviews/${id}`, {
+                method: 'DELETE'
+            })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.acknowledged === true){
+                    alert('deleted successfully');
+                    const remaining = reviews.filter(rev => rev._id !== id);
+                    setReviews(remaining);
+                }
+            })
+        }
+    }
 
     return (
         <div className='reviewrow'>
@@ -47,7 +65,7 @@ const Myreviews = () => {
                             reviews.map(review => <ReviewRow
                                 key={review._id}
                                 review={review}
-                               
+                                handleDelete={handleDelete}
                                 handleStatusUpdate={handleStatusUpdate}
                             ></ReviewRow>)
                         }

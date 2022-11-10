@@ -2,6 +2,18 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Project Overview:
+  
+  1. This project is designed for a travel agencies who wished to provide services for exploring Canada with better hotel amenities.
+
+  2.While doing this project,i for the first time use MongoDB as a server side document database.I also experienced how to create a Database,Database Access,Database Collection and how o connect MongoDB with my server.
+  
+  3.I also learned CRUD operation while doing this project.Through POST,PATCH,GET,DELETE method i also witnessed the beauty of How to Create a data, How to Read a data ,How to Update and Delete Data.
+
+  4.I also used Google Auth and Email and Password Verification method for creating simple authentication .
+
+  5.PrivateRoute is also being used for Addhotel and MyReviews Section.One cannot access to these section without log in .He/she cannot add his/her own reviews as well as add a new hotel.
+
 ## Available Scripts
 
 In the project directory, you can run:

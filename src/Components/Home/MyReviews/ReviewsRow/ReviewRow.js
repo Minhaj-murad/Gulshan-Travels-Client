@@ -1,8 +1,9 @@
 import React from 'react';
  import './ReviewRow.css'
-const ReviewRow = ({ review }) => {
+const ReviewRow = ({ review,handleDelete }) => {
     console.log(review);
-    const { hotelName,  message, hotelimg } = review;
+    const {hotelid, hotelName,  message, hotelimg} = review;
+    console.log(hotelid);
 
 
     return (
@@ -14,6 +15,9 @@ const ReviewRow = ({ review }) => {
                         <h1 className="text-xl font-bold -mt-20 text-amber-600">{hotelName}</h1>
                         <p className="py-6 font-bold"> <span className='text-amber-600 underline '>My Reviews : </span>  <br />{message}</p>
                         
+                    </div>
+                    <div>
+                    <button onClick={() => handleDelete(hotelid)} className='btn btn-ghost'>Delete</button>
                     </div>
                 </div>
             </div>
