@@ -12,6 +12,7 @@ import Main from './Components/Main/Main';
 import MyBlog from './Components/MyBlog/MyBlog';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Signup from './Components/Signup/Signup';
+import UpdateReview from './Components/UpdateReview/UpdateReview';
 
 function App() {
   const router=createBrowserRouter([
@@ -66,6 +67,12 @@ function App() {
            path:'/hotels/:id',
            element:<HotelDetails> </HotelDetails>,
            loader: ({params})=> fetch(`http://localhost:5000/hotels/${params.id}`)
+        },
+        {
+           path:'/updatereviews/:id',
+           element:<UpdateReview> </UpdateReview>,
+           loader: ({params})=> fetch(`http://localhost:5000/reviews/${params.id}`)
+           
         },
         {
           path:'/signup',

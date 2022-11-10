@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
  import './ReviewRow.css'
 const ReviewRow = ({ review,handleDelete }) => {
     console.log(review);
@@ -16,8 +17,10 @@ const ReviewRow = ({ review,handleDelete }) => {
                         <p className="py-6 font-bold"> <span className='text-amber-600 underline '>My Reviews : </span>  <br />{message}</p>
                         
                     </div>
-                    <div>
-                    <button onClick={() => handleDelete(hotelid)} className='btn btn-ghost'>Delete</button>
+                    <div className='flex justify-between'>
+                    <button onClick={() => handleDelete(hotelid)} className='btn btn-success'>Delete</button>
+                     <br />
+                    <Link to={`/updatereviews/${hotelid}`}><button  className='btn btn-warning'>Edit </button></Link>
                     </div>
                 </div>
             </div>

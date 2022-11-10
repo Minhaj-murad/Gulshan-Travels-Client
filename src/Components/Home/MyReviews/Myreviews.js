@@ -39,15 +39,15 @@ const Myreviews = () => {
         })
     }
     const handleDelete = id =>{
-        const proceed = window.confirm('Are you sure, you want to cancel this REVIEW?');
-        if(proceed){
+        const agree = window.confirm(`Are you sure, you want to cancel this REVIEW? ${id}`);
+        if(agree){
             fetch(`http://localhost:5000/reviews/${id}`, {
                 method: 'DELETE'
             })
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                if (data.acknowledged === true){
+                if (data.deletedCount > 0){
                     alert('deleted successfully');
                     const remaining = reviews.filter(rev => rev._id !== id);
                     setReviews(remaining);
