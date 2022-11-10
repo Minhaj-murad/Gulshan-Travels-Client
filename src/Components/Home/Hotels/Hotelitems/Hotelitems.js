@@ -5,11 +5,13 @@ import { PhotoProvider, PhotoView } from 'react-photo-view';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom';
+
 const Hotelitems = ({ hotel }) => {
     console.log(hotel);
     const {_id, img, price, rating, hotelName, place, description } = hotel;
     return (
         <div>
+            
             <div data-aos="flip-left"
                         data-aos-easing="ease-out-cubic"
                         data-aos-duration="2000" className="card card-compact w-96 bg-base-100 shadow-2xl">

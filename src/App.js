@@ -1,7 +1,6 @@
-
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
-import Booking from './Components/Booking/Booking';
+import AddHotels from './Components/AddHotels/AddHotels';
 import Allservices from './Components/Home/Allservices/Allservices';
 import Home from './Components/Home/Home';
 import HotelDetails from './Components/Home/Hotels/HotelDetails/HotelDetails';
@@ -52,8 +51,9 @@ function App() {
           element:<Login></Login>,
         },
         {
-          path:'/bookings',
-          element:<PrivateRoute><Booking></Booking></PrivateRoute>,
+         path:'/addhotels/:id',
+         element:<PrivateRoute><AddHotels></AddHotels></PrivateRoute>,
+         loader: ({params})=> fetch(`http://localhost:5000/hotels/${params.id}`)
         },
         { 
           path:'/myreviews',

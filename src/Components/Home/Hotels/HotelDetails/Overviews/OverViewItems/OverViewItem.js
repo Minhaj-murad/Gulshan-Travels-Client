@@ -4,16 +4,22 @@ const OverViewItem = ({ review }) => {
     console.log(review);
     const {name, photo, message } = review;
     return (
-        <div className='bg-slate-100 w-72 rounded-2xl m-8'>
-            <div className='flex justify-center'>
-                <img className='w-12 h-12 mr-6 rounded-full' src={photo} alt="" />
-                <h1 className='text-xl text-gray-600 font-semibold'>{name}</h1>
-            </div>
-            <div className='mt-6 '>
-            <h1 className='text-xl text-gray-600 font-semibold'>Review: <hr /></h1> <br />
-            <h1 className='text-lg text-gray-600 font-semibold text-center'>{message}</h1>
+        <div className='reviewrow'>
+        <div className="hero h-72 rounded-2xl bg-base-200">
+            <div className="inline ">
+                <div className='flex w-full gap-4'>
+                <img className='w-12 h-12 rounded-full -mt-20' src={photo} alt="" />
+                <h1 className="text-xl font-bold -mt-20 text-amber-600">{name}</h1>
+                </div>
+                <div className="w-full -mt-10 -mr-10">
+                   
+                    <p className="py-6 font-bold"> <span className='text-amber-600 underline '> Reviews : </span>  <br />{message}</p>
+                    
+                </div>
             </div>
         </div>
+
+    </div>
     );
 };
 
